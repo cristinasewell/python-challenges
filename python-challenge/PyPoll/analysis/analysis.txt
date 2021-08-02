@@ -1,0 +1,10 @@
+Election Results
+------------------------------
+Total Votes: 0
+------------------------------
+Khan: 63.000% (votes)
+Correy: 20.000% (votes)
+Li: 14.000% (votes)
+O'Tooley: 3.000% (votes)
+Winner: Khan
+------------------------------
