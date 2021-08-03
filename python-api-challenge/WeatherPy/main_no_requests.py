@@ -15,52 +15,7 @@ output_data_file = "output_data/cities.csv"
 # City	Lat	Lng	Max Temp	Humidity	Cloudiness	Wind Speed	Country	Date
 
 #***********************************************************************************
-city_data = []
-
-with open(output_data_file, 'r') as f:
-    csv_obj = csv.reader(f)
-
-    header = next(csv_obj)
-
-    for row in csv_obj:
-        name = row[1]
-        lat = float(row[2])
-        lon = float(row[3])
-        max_temp = float(row[4])
-        humidity = float(row[5])
-        cloud = float(row[6])
-        wind_speed = float(row[7])
-        country = row[8]
-        date = int(row[9])
-        city = {'City': name, 'Lat': lat, 'Lon': lon, 'Max Temp': max_temp,
-                    'Humidity': humidity, 'Cloudiness': cloud, 'Wind Speed': wind_speed,
-                    'Country': country, 'Date': date}
-        city_data.append(city)
-#print(city_data)
-        # city_info.append(row)
-
-# city_data = []
-
-# for data in city_info:
-#     try:
-#         name = data['name']
-#         # if we find the coord, then get the lat
-#         lat = data['coord'].get('lat')
-#         lon = data['coord'].get('lon')
-#         max_temp = data['main']['temp_max']
-#         humidity = data['main']['humidity']
-#         cloud = data['clouds']['all']
-#         wind_speed = data['wind']['speed']
-#         country = data['sys']['country']
-#         date = data['dt']
-#         city = {'City': name, 'Lat': lat, 'Lon': lon, 'Max Temp': max_temp,
-#                     'Humidity': humidity, 'Cloudiness': cloud, 'Wind Speed': wind_speed,
-#                     'Country': country, 'Date': date}
-#         city_data.append(city)
-#     except Exception as ex:
-#         print(ex, data)
-
-city_data_df = pd.DataFrame(city_data)
+city_data_df = pd.read_csv(output_data_file)
   
 # city_data_df.to_csv(output_data_file)
 
